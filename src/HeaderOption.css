@@ -1,0 +1,13 @@
+.headeroption {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: gray;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.headeroption:hover {
+    color: black;
+}
+
