@@ -5,6 +5,7 @@
     color: gray;
     cursor: pointer;
     font-size: 0.75rem;
+    white-space: nowrap;
 }
 
 .headeroption:hover {

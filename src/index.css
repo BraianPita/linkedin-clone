@@ -15,3 +15,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+.vertical__separator {
+  height: 100%;
+  border-left: 1px solid rgb(226, 226, 226);
+  margin: 0 10px;
+}
+
+.horizontal__separator {
+  width: 100%;
+  border-top: 1px solid rgb(226, 226, 226);
+  margin: 10px 0;
+}

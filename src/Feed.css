@@ -1,0 +1,44 @@
+.feed {
+    flex: 0.6;
+    flex-direction: column;
+}
+
+.feed__new__post {
+    position: sticky;
+    padding: 1rem;
+    margin: 10px auto;
+
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.feed__post__content {
+    display: flex;
+    flex-direction: row;
+    color: gray;
+    align-items: center;
+}
+
+.feed__avatar {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.feed__post__content > input {
+    border-radius: 50ch;
+    min-height: 45px;
+    outline: 1px solid lightgray;
+    border: none;
+    font-weight: 600;
+    padding-left: 10px;
+    color: rgb(235, 234, 234);
+    width: 100%;
+}
+
+.feed__post__content > input:hover {
+   background-color: rgb(238, 237, 237);
+}

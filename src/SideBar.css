@@ -1,0 +1,44 @@
+.sidebar {
+    flex: 0.2;
+    flex-direction: column;
+}
+
+.sidebar__top {
+    position: sticky;
+    margin-top:10px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.sidebar__top > img {
+    object-fit: cover;
+    width: 100%;
+    height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.sidebar__top > h3 {
+    font-size: 1rem;
+    color: rgb(68, 68, 68);
+}
+
+.sidebar__top > p {
+    font-size: 0.75rem;
+    color: gray;
+}
+
+.sidebar__avatar {
+    color: gray;
+    background-color: white;
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50%;
+    margin-top: -35px;
+}
+

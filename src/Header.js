@@ -19,7 +19,7 @@ function Header() {
   return (
     <div className='header'>
         <div class="header__left">
-            <img src="linkedin.png" />
+            <img src="linkedin.png" alt="Logo"/>
             <div class="header__search">
                 {/*  Search Icon */}
                 <SearchIcon />

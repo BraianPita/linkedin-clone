@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
+import Feed from './Feed';
 import Header from './Header';
+import SideBar from './SideBar';
 
 function App() {
   return (
@@ -9,8 +11,8 @@ function App() {
 
       <div className='app__body'>
 
-        {/* Left column */}
-        {/* Feed */}
+        <SideBar/>
+        <Feed />
         {/* Right Column */}
 
       </div>
