@@ -2,7 +2,22 @@ import React from 'react'
 import './SideBar.css'
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { KeyboardArrowUp } from '@mui/icons-material';
 
+const hashtags = ["programming", "engineering", "datascience", "webdevelopment"]
+
+const StatItem = ({item, value}) => (
+  <div className='sidebar__stats'>
+      <p>{item}</p>
+      <p>{value}</p>
+  </div>
+);
+
+const Hashtag = ({text}) => (
+  <div className='sidebar__hashtag'>
+    {text}
+  </div>
+);
 
 function SideBar({accountImg}) {
   return (
@@ -24,13 +39,21 @@ function SideBar({accountImg}) {
 
             <div class="horizontal__separator" />
 
-            <p>Connections</p>
-
+            <StatItem item="Connections" value={57} />
+            <StatItem item="Visits" value={352} />
+            <br />
 
         </div>
 
         <div class="sidebar__bottom">
-
+            <div className='sidebar__dropdown'>
+              <div><p>Recent</p> <button><KeyboardArrowUp /></button></div>
+              <ul>
+                {hashtags.map(value => (
+                 <li><Hashtag text={value} /></li> 
+                ))}
+              </ul>
+            </div>
         </div>
         
     </div>

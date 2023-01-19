@@ -1,6 +1,10 @@
-import { AccountCircle } from '@mui/icons-material'
+import { AccountCircle, Newspaper, PhotoSizeSelectActualOutlined, SmartDisplay} from '@mui/icons-material'
+import EventIcon from '@mui/icons-material/Event'
 import React from 'react'
 import './Feed.css'
+
+// Icons
+
 
 function Feed({accountImg}) {
   return (
@@ -19,9 +23,22 @@ function Feed({accountImg}) {
             </div>
 
             <div class="feed__post__options">
-                <ul>
-
-                </ul>
+                    <span>
+                        <PhotoSizeSelectActualOutlined style={{color: 'dodgerblue'}} />
+                        Photo
+                    </span>
+                    <span>
+                        <SmartDisplay style={{color: 'green'}} />
+                        Video
+                    </span>
+                    <span>
+                        <EventIcon style={{color: 'orange'}} />
+                        Event
+                    </span>
+                    <span>
+                        <Newspaper style={{color: 'red'}} />
+                        Write article
+                    </span>
             </div>
 
         </div>
