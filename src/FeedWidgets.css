@@ -1,0 +1,33 @@
+.feedwidgets__news {
+    position: sticky;
+    margin-top:10px;
+    margin: 10px;
+    margin-left: auto;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    outline: 1px solid gainsboro;
+}
+
+.feedwidgets__news > h4 {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.feedwidgets__news h5 {
+    color: rgb(92, 92, 92);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.feedwidgets__news li {
+    margin: 10px 0;
+}
+
+.feedwidgets__news li > p {
+    color: var(--color-text-mute);
+    font-size: 0.8rem;
+    margin-top: 2px;
+}
