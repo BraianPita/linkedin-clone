@@ -67,12 +67,13 @@
 }
 
 .sidebar__stats > p:nth-child(2) {
-    color: rgb(64, 145, 250);
+    color: var(--color-main);
 }
 
 .sidebar__bottom {
     box-sizing: border-box;
     position: sticky;
+    top:75px;
     margin: 10px;
     margin-left: auto;
     background-color: white;

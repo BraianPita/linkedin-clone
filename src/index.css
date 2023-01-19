@@ -4,6 +4,7 @@
 
 :root {
   --color-text-mute : rgb(141, 141, 141);
+  --color-main : #0077B5;
 }
 
 body {

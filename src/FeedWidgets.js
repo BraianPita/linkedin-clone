@@ -1,6 +1,9 @@
 import React from 'react'
 import './FeedWidgets.css'
 
+// Icons
+import InfoIcon from '@mui/icons-material/Info';
+
 const sample_news = [
     {
         title: "Fastest-growing jobs in the US",
@@ -26,7 +29,10 @@ const sample_news = [
 
 const NewsWidget = ({news}) => (
     <div class="feedwidgets__news">
-        <h4>Linkedin News</h4>
+        <div>
+            <h4>Linkedin News</h4>
+            <InfoIcon className='infoicon' />
+        </div>
         <ul>
             {news.map(article => (
                 <li>
@@ -46,6 +52,22 @@ const FeedWidgets = () => {
   return (
     <div className='feedwidgets'>
         <NewsWidget news={sample_news} />
+
+
+
+        <div class="feedwidgets__footer">
+                <a>About</a>
+                <a>Accessibility</a>
+                <a>Help Center</a>
+                <a>Privacy & Terms </a>
+                <a>Ad Choices</a>
+                <a>Advertising</a>
+                <a>Business Services </a>
+                <a>Get the LinkedIn app</a>
+                <a>More</a>
+        </div>
+
+        
     </div>
   )
 }
