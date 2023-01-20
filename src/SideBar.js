@@ -37,7 +37,7 @@ function SideBar({accountImg}) {
             <h3>Braian Pita</h3>
             <p>University of Houston - Computer Information Systems</p>
 
-            <div class="horizontal__separator" />
+            <div className="horizontal__separator" />
 
             <StatItem item="Connections" value={57} />
             <StatItem item="Visits" value={352} />
@@ -45,7 +45,7 @@ function SideBar({accountImg}) {
 
         </div>
 
-        <div class="sidebar__bottom">
+        <div className="sidebar__bottom">
             <div className='sidebar__dropdown'>
               <div><p>Recent</p> <button><KeyboardArrowUp /></button></div>
               <ul>

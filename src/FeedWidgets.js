@@ -28,7 +28,7 @@ const sample_news = [
 ]
 
 const NewsWidget = ({news}) => (
-    <div class="feedwidgets__news">
+    <div className="feedwidgets__news">
         <div>
             <h4>Linkedin News</h4>
             <InfoIcon className='infoicon' />
@@ -55,16 +55,16 @@ const FeedWidgets = () => {
 
 
 
-        <div class="feedwidgets__footer">
-                <a>About</a>
-                <a>Accessibility</a>
-                <a>Help Center</a>
-                <a>Privacy & Terms </a>
-                <a>Ad Choices</a>
-                <a>Advertising</a>
-                <a>Business Services </a>
-                <a>Get the LinkedIn app</a>
-                <a>More</a>
+        <div className="feedwidgets__footer">
+                <a href='#top' >About</a>
+                <a href='#top' >Accessibility</a>
+                <a href='#top' >Help Center</a>
+                <a href='#top' >Privacy & Terms </a>
+                <a href='#top' >Ad Choices</a>
+                <a href='#top' >Advertising</a>
+                <a href='#top' >Business Services </a>
+                <a href='#top' >Get the LinkedIn app</a>
+                <a href='#top' >More</a>
         </div>
 
         

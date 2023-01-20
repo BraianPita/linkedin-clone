@@ -18,9 +18,9 @@ import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 function Header() {
   return (
     <div className='header'>
-        <div class="header__left">
+        <div className="header__left">
             <img src="linkedin.png" alt="Logo"/>
-            <div class="header__search">
+            <div className="header__search">
                 {/*  Search Icon */}
                 <SearchIcon />
                 
@@ -28,7 +28,7 @@ function Header() {
             </div>
         </div>
 
-        <div class="header__right">
+        <div className="header__right">
             <HeaderOption Icon={HomeIcon} title="Home" />
             <HeaderOption Icon={GroupIcon} title="My Network"/>
             <HeaderOption Icon={WorkIcon} title="Jobs"/>

@@ -22,7 +22,7 @@ function Feed({accountImg}) {
                 <input type="text" placeholder='Start a post' />
             </div>
 
-            <div class="feed__post__options">
+            <div className="feed__post__options">
                     <span>
                         <PhotoSizeSelectActualOutlined style={{color: 'dodgerblue'}} />
                         Photo
