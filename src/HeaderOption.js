@@ -2,15 +2,25 @@ import React from 'react'
 import "./HeaderOption.css"
 
 
-function HeaderOption({Icon, title}) {
+export function HeaderOption({Icon, title, onClick = null}) {
   return (   
-    <div className='headeroption'>
+    <div className='headeroption' onClick={onClick}>
         <Icon />
         {title}
     </div>
   )
 }
 
-
+export function DropdownHeaderOption({Icon, title, onClick = null, Dropdown=null}) {
+  return (   
+    <div>
+      <div className='headeroption' onClick={onClick}>
+        <Icon />
+        {title}
+      </div>
+      <Dropdown />
+    </div>
+  )
+}
 
 export default HeaderOption

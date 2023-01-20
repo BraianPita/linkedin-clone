@@ -65,6 +65,8 @@
 .feedwidgets__footer > a {
     margin: 5px;
     cursor: pointer;
+    color: var(--color-text-mute);
+    text-decoration: none;
 }
 
 .feedwidgets__footer > a:hover {

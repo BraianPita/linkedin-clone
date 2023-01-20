@@ -1,11 +1,12 @@
-import React from 'react'
-import './Header.css'
-
+import React, {useState} from 'react';
+import './Header.css';
+import { logout } from './features/user/userSlice';
+import { useDispatch } from 'react-redux';
 
 
 // Icons
 import SearchIcon from '@mui/icons-material/Search';
-import HeaderOption from './HeaderOption';
+import {HeaderOption, DropdownHeaderOption} from './HeaderOption';
 import HomeIcon from '@mui/icons-material/HomeRounded';
 import GroupIcon from '@mui/icons-material/Group';
 import WorkIcon from '@mui/icons-material/Work';
@@ -15,7 +16,28 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AppsIcon from '@mui/icons-material/Apps';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 
+
+
+
 function Header() {
+
+  const [meDropped, setMeDropped] = useState(false);
+  const dispatch = useDispatch();
+
+  const logoutAction = () => {
+    setMeDropped(false);
+    dispatch(logout());
+  };
+
+  function MeDropdown() {
+    console.log(meDropped)
+    return (
+      <div className={ (meDropped ? "me_dropped " : "") + "me_dropdown"}>
+        <p onClick={() => {logoutAction()}}>Logout</p>
+      </div>
+    );
+  } 
+
   return (
     <div className='header'>
         <div className="header__left">
@@ -34,7 +56,7 @@ function Header() {
             <HeaderOption Icon={WorkIcon} title="Jobs"/>
             <HeaderOption Icon={TextsmsIcon} title="Messaging"/>
             <HeaderOption Icon={NotificationsIcon} title="Notifications"/>
-            <HeaderOption Icon={AccountCircleIcon} title="Me"/>
+            <DropdownHeaderOption Icon={AccountCircleIcon} onClick={() => setMeDropped(!meDropped)} Dropdown={MeDropdown} title="Me ⮟"/>
 
             <div className='vertical__separator'></div>
 
