@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import './Header.css';
-import { logout } from './features/user/userSlice';
-import { useDispatch } from 'react-redux';
-
+import { signOut } from "firebase/auth";
+import { auth } from './features/firebase/firebaseApp';
 
 // Icons
 import SearchIcon from '@mui/icons-material/Search';
@@ -22,11 +21,10 @@ import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 function Header() {
 
   const [meDropped, setMeDropped] = useState(false);
-  const dispatch = useDispatch();
 
   const logoutAction = () => {
     setMeDropped(false);
-    dispatch(logout());
+    signOut(auth);
   };
 
   function MeDropdown() {

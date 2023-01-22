@@ -49,8 +49,8 @@ function SideBar({accountImg}) {
             <div className='sidebar__dropdown'>
               <div><p>Recent</p> <button><KeyboardArrowUp /></button></div>
               <ul>
-                {hashtags.map(value => (
-                 <li><Hashtag text={value} /></li> 
+                {hashtags.map((value, idx) => (
+                 <li key={idx} ><Hashtag text={value} /></li> 
                 ))}
               </ul>
             </div>
