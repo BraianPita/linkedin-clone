@@ -34,8 +34,8 @@ const NewsWidget = ({news}) => (
             <InfoIcon className='infoicon' />
         </div>
         <ul>
-            {news.map(article => (
-                <li>
+            {news.map((article, idx) => (
+                <li key={idx}>
                     <h5>
                         {article.title}
                     </h5>
