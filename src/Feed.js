@@ -3,13 +3,25 @@ import EventIcon from '@mui/icons-material/Event'
 import React from 'react'
 import './Feed.css'
 
+import { createPost } from './features/firebase/db/postsCollection';
+import { useState } from 'react';
+
 // Icons
 
-
 function Feed({accountImg}) {
+
+    const [content, setContent] = useState("");
+
+    const submitPost = (e) => {
+        e.preventDefault();
+    
+        createPost({}, content);
+    }
+
+
   return (
     <div className='feed'>
-        <div className='feed__new__post'>
+        <form onSubmit={submitPost} action='POST' className='feed__new__post'>
 
             <div className='feed__post__content'>
                 {
@@ -19,7 +31,7 @@ function Feed({accountImg}) {
                     <AccountCircle fontSize='large' className='feed__avatar' />
                 }
 
-                <input type="text" placeholder='Start a post' />
+                <input name="content" value={content} onChange={e =>{setContent(e.target.value)}} type="text" placeholder='Start a post' />
             </div>
 
             <div className="feed__post__options">
@@ -41,7 +53,7 @@ function Feed({accountImg}) {
                     </span>
             </div>
 
-        </div>
+        </form>
     </div>
   )
 }
