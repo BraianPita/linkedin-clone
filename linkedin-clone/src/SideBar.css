@@ -1,0 +1,143 @@
+.sidebar {
+    flex: 0.2;
+    flex-direction: column;
+}
+
+.sidebar__top {
+    position: sticky;
+    margin-top:10px;
+    margin: 10px;
+    margin-left: auto;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+
+    outline: 1px solid gainsboro;
+}
+
+.sidebar__top > img {
+    object-fit: cover;
+    width: 100%;
+    height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.sidebar__top > h3 {
+    font-size: 1rem;
+    color: rgb(68, 68, 68);
+}
+
+.sidebar__top > p {
+    text-align: center;
+    font-size: 0.75rem;
+    color: gray;
+}
+
+.sidebar__avatar {
+    color: gray;
+    background-color: white;
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50%;
+    margin-top: -35px;
+}
+
+.sidebar__stats {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.25rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.sidebar__stats:hover {
+    background-color: whitesmoke;
+}
+
+.sidebar__stats > p {
+    margin: 0 1rem;
+    font-weight: 500;
+    color: var(--color-text-mute);
+}
+
+.sidebar__stats > p:nth-child(2) {
+    color: var(--color-main);
+}
+
+.sidebar__bottom {
+    box-sizing: border-box;
+    position: sticky;
+    top:75px;
+    margin: 10px;
+    margin-left: auto;
+    background-color: white;
+    border-radius: 10px;
+    width: 200px;
+    font-size: small;
+
+    outline: 1px solid gainsboro;
+}
+
+.sidebar__dropdown > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.sidebar__dropdown > div > p {
+    margin: 14px 5px 10px 5px;
+}
+
+.sidebar__dropdown > div button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    padding: 2px;
+    margin-right: 7px;
+    margin-bottom: 2px;
+}
+
+.sidebar__dropdown > div button:hover {
+    background-color: whitesmoke;
+}
+
+.sidebar__dropdown > div:hover button {
+    display: block;
+    cursor: pointer;
+}
+
+.sidebar__dropdown > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar__dropdown > li {
+    margin: 0;
+}
+
+.sidebar__hashtag {
+    padding: 2px 10px;
+    color: var(--color-text-mute);
+    cursor: pointer;
+}
+
+.sidebar__hashtag::before {
+    content: "# ";
+    font-weight: bold;
+    font-size: 1rem;
+    font-size: large;
+}
+
+.sidebar__hashtag:hover {
+    background-color: whitesmoke;
+}

@@ -1,0 +1,78 @@
+.feed {
+    flex: 0.6;
+    flex-direction: column;
+    max-width: 750px;
+}
+
+.feed__new__post {
+    position: sticky;
+    padding: 0.5rem 1rem;
+    margin: 10px auto;
+
+    outline: 1px solid gainsboro;
+
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.feed__post__content {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    color: gray;
+    align-items: center;
+    width: 100%;
+}
+
+.feed__avatar {
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.feed__post__content > input {
+    border-radius: 50ch;
+    min-height: 45px;
+    outline: 1px solid lightgray;
+    border: none;
+    font-weight: 600;
+    padding-left: 10px;
+    color: var(--color-text-mute);
+    width: 100%;
+}
+
+.feed__post__content > input:hover {
+   background-color: rgb(238, 237, 237);
+}
+
+.feed__post__options {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.feed__post__options > span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: var(--color-text-mute);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    padding: 0.6rem 0.5rem;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.feed__post__options > span > * {
+    margin-right: 0.5rem;
+}
+
+.feed__post__options > span:hover {
+    background-color: whitesmoke;
+}
