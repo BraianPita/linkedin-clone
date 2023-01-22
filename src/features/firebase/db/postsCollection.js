@@ -3,6 +3,7 @@ import firebase from 'firebase/compat/app';
 import { db } from "../firebaseApp";
 
 
+
 export async function createPost(user, content) {
     try {
         const docRef = await addDoc(collection(db, "posts"), {

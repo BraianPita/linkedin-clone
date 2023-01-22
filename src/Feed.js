@@ -1,16 +1,36 @@
 import { AccountCircle, Newspaper, PhotoSizeSelectActualOutlined, SmartDisplay} from '@mui/icons-material'
 import EventIcon from '@mui/icons-material/Event'
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Feed.css'
 
 import { createPost } from './features/firebase/db/postsCollection';
 import { useState } from 'react';
+import { db } from './features/firebase/firebaseApp';
 
 // Icons
 
 function Feed({accountImg}) {
 
     const [content, setContent] = useState("");
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+
+        db.collection('posts')
+        .orderBy('timestamp', 'desc')
+        .onSnapshot((snapshot) => {
+
+            setPosts(snapshot.docs.map(doc => (
+                {
+                  id: doc.id,
+                  data: doc.data(),
+                }
+              ))
+              )
+
+      })
+
+    }, [])
 
     const submitPost = (e) => {
         e.preventDefault();
@@ -54,6 +74,18 @@ function Feed({accountImg}) {
             </div>
 
         </form>
+
+
+        <div>
+                {
+                posts?.map(post => {
+                    return (
+                    <p key={post.id}>{post.data.content}</p>
+                    )
+                })
+            }
+        </div>
+
     </div>
   )
 }
